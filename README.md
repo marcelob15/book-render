@@ -51,7 +51,7 @@ Você verá a interface do Swagger UI, onde pode ver todos os seus endpoints, se
 
 
 Pos Tech - Fase 1 - Curso de Machine Leanring Engineering
-Nome: Marcelo Bertin
+Nome: MB
 RM: 368902
 
 
