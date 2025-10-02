@@ -94,6 +94,28 @@ de forma amigável desde a fonte até o consumidor final (seja ele um Cientista 
 
 ![Diagrama da Arquitetura](LINK_PARA_IMAGEM_DO_SEU_DIAGRAMA)
 
+graph TD;
+    A[Fonte Web: books.toscrape.com] --> B(Scraper: scripts/scraper.py);
+    B -- Extrai e Limpa --> C{{Armazenamento: data/books.csv}};
+    C --> D{API RESTful: FastAPI};
+    D -- Endpoints --> E[Consumidor: Cientista de Dados];
+    D -- Endpoints --> F[Consumidor: Aplicação Web/Mobile];
+
+    subgraph "Pipeline de Dados"
+        B
+        C
+    end
+
+    subgraph "Camada de Serviço"
+        D
+    end
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style C fill:#bbf,stroke:#333,stroke-width:2px
+    style D fill:#9f9,stroke:#333,stroke-width:2px
+
+
+
 O fluxo de trabalho é dividido em três etapas principais:
 1.  **Ingestão de Dados:** Um script de Web Scraping robusto navega pelo site [books.toscrape.com](http://books.toscrape.com), extraindo informações detalhadas de cada livro.
 2.  **Armazenamento:** Os dados coletados são limpos, estruturados e armazenados em um formato CSV, criando uma base de dados local, leve e portátil.
