@@ -77,8 +77,7 @@ recomendação com dados de livros.**
 ## 📖 Visão Geral do Projeto
 
 "A BookScrape API foi desenvolvida para solucionar a necessidade de um dataset de livros estruturado para aplicações de Machine Learning. 
-O projeto automatiza o ciclo de extração e transformação dos dados, disponibilizando-os através de uma interface RESTful para simplificar 
-e acelerar o desenvolvimento de modelos de recomendação e outras análises."
+O projeto automatiza o ciclo de extração e transformação dos dados, disponibilizando-os através de uma interface RESTful para o desenvolvimento de modelos de recomendação e outras análises."
 
 Por que funciona:
 
