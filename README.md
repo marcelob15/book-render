@@ -70,7 +70,7 @@ recomendação com dados de livros.**
 ## 🚀 Links Rápidos
 
 *   **API em Produção:** [LINK_DO_SEU_DEPLOY/docs](LINK_DO_SEU_DEPLOY/docs)
-*   **Vídeo de Apresentação:** [LINK_DO_VÍDEO_NO_YOUTUBE_OU_SIMILAR](LINK_DO_VÍDEO_NO_YOUTUBE_OU_SIMILAR)
+*   **Vídeo de Apresentação:** [LINK_DO_VÍDEO_NO_YOUTUBE_OU_SIMILAR](https://youtu.be/10DXyuAWIb0)
 
 ---
 
