@@ -94,26 +94,36 @@ de forma amigável desde a fonte até o consumidor final (seja ele um Cientista 
 
 ![Diagrama da Arquitetura](LINK_PARA_IMAGEM_DO_SEU_DIAGRAMA)
 
-graph TD;
-    A[Fonte Web: books.toscrape.com] --> B(Scraper: scripts/scraper.py);
-    B -- Extrai e Limpa --> C{{Armazenamento: data/books.csv}};
-    C --> D{API RESTful: FastAPI};
-    D -- Endpoints --> E[Consumidor: Cientista de Dados];
-    D -- Endpoints --> F[Consumidor: Aplicação Web/Mobile];
+```mermaid
+graph TD
+    subgraph "Fonte Externa"
+        A[fa:fa-globe Fonte Web: books.toscrape.com]
+    end
 
     subgraph "Pipeline de Dados"
-        B
-        C
+        B["fa:fa-cogs Scraper (scripts/scraper.py)"]
+        C("fa:fa-database Armazenamento (data/books.csv)")
     end
 
     subgraph "Camada de Serviço"
-        D
+        D["fa:fa-server API RESTful (FastAPI)"]
     end
 
+    subgraph "Consumidores Finais"
+        E["fa:fa-user-tie Cientista de Dados"]
+        F["fa:fa-robot Aplicação / Modelo de ML"]
+    end
+
+    A -- Requisição HTTP --> B;
+    B -- Gera CSV com dados limpos --> C;
+    C -- Fornece dados para a API --> D;
+    D -- Serve dados via Endpoints --> E;
+    D -- Serve dados via Endpoints --> F;
+
+    %% Estilos
     style A fill:#f9f,stroke:#333,stroke-width:2px
     style C fill:#bbf,stroke:#333,stroke-width:2px
     style D fill:#9f9,stroke:#333,stroke-width:2px
-
 
 
 O fluxo de trabalho é dividido em três etapas principais:
