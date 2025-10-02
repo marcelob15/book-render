@@ -94,39 +94,12 @@ de forma amigável desde a fonte até o consumidor final (seja ele um Cientista 
 
 ![Diagrama da Arquitetura](LINK_PARA_IMAGEM_DO_SEU_DIAGRAMA)
 
+
+
 O fluxo de trabalho é dividido em três etapas principais:
 1.  **Ingestão de Dados:** Um script de Web Scraping robusto navega pelo site [books.toscrape.com](http://books.toscrape.com), extraindo informações detalhadas de cada livro.
 2.  **Armazenamento:** Os dados coletados são limpos, estruturados e armazenados em um formato CSV, criando uma base de dados local, leve e portátil.
 3.  **Disponibilização (API):** Uma API RESTful, construída com FastAPI, lê os dados processados e os expõe através de endpoints, permitindo consultas.
-
-```mermaid
-graph LR
-    subgraph Fonte
-        A[fa:fa-globe books.toscrape.com]
-    end
-
-    subgraph "Pipeline de Dados (ETL)"
-        B["fa:fa-cogs Scraper<br/>(scripts/scraper.py)"] -- Extrai e Limpa --> C("fa:fa-database Armazenamento<br/>data/books.csv");
-    end
-
-    subgraph "Camada de Serviço"
-        D["fa:fa-server API RESTful<br/>(FastAPI)"]
-    end
-
-    subgraph Consumidores
-        E["fa:fa-user-tie Cientista de Dados<br/>(Notebooks, Análises)"]
-        F["fa:fa-robot Aplicações de ML<br/>(Sistemas de Recomendação)"]
-    end
-
-    A -- Dados Brutos em HTML --> B;
-    C -- Fonte de Dados --> D;
-    D -- Endpoints (/books, /search) --> E;
-    D -- Endpoints (/books, /search) --> F;
-
-    %% Estilos para dar cor aos componentes principais
-    style A fill:#D6EAF8,stroke:#2874A6
-    style C fill:#D1F2EB,stroke:#117A65
-    style D fill:#FDEDEC,stroke:#B03A2E
 
 
 ---
