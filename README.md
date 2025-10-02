@@ -92,7 +92,7 @@ Por que funciona:
 A arquitetura foi projetada para ser simples, eficiente e escalável, garantindo que os dados fluam 
 de forma amigável desde a fonte até o consumidor final (seja ele um Cientista de Dados, um notebook de análise ou outra aplicação).
 
-![Diagrama da Arquitetura](meu_diagrama.svg)
+![Diagrama da Arquitetura](meu_diagrama.png)
 
 O fluxo de trabalho é dividido em três etapas principais:
 1.  **Ingestão de Dados:** Um script de Web Scraping robusto navega pelo site [books.toscrape.com](http://books.toscrape.com), extraindo informações detalhadas de cada livro.
